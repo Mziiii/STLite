@@ -31,7 +31,7 @@ namespace sjtu {
     private:
         class Node {
         public:
-            Node *left= nullptr, *right= nullptr;
+            Node *left = nullptr, *right = nullptr;
             value_type val;
             int size, priority;
 
@@ -222,7 +222,8 @@ namespace sjtu {
                 int k = treap_ptr->get_rank(treap_ptr->root, node_ptr->val.first);
                 if (treap_ptr->sze() < k) throw invalid_iterator();
                 iterator iter = *this;
-                node_ptr = treap_ptr->get_kth(k);
+                if (treap_ptr->sze() == k) node_ptr = nullptr;
+                node_ptr = treap_ptr->get_kth(k + 1);
                 return iter;
             }
 
@@ -234,7 +235,8 @@ namespace sjtu {
                 if (treap_ptr->sze() == 0) throw invalid_iterator();
                 int k = treap_ptr->get_rank(treap_ptr->root, node_ptr->val.first);
                 if (treap_ptr->sze() < k) throw invalid_iterator();
-                node_ptr = treap_ptr->get_kth(++k);
+                if (treap_ptr->sze() == k) node_ptr = nullptr;
+                node_ptr = treap_ptr->get_kth(k + 1);
                 return *this;
             }
 
@@ -448,13 +450,10 @@ namespace sjtu {
         map(const map &other) : treap(nullptr) {
             treap = new Treap(*(other.treap));
         }
-
-        /**
-         * TODO assignment operator
-         */
+        
         map &operator=(const map &other) {
             if (this == &other) return *this;
-            treap = other.treap;
+            treap = new Treap(*(other.treap));
             return *this;
         }
 
@@ -493,7 +492,10 @@ namespace sjtu {
          *   performing an insertion if such key does not already exist.
          */
         T &operator[](const Key &key) {
-            if (!treap) treap->insert(value_type(key, T()));
+            if (!treap) {
+                treap = new Treap;
+                treap->insert(value_type(key, T()));
+            }
             int k = treap->get_rank(treap->root, key);
             if (k == 0) treap->insert(value_type(key, T()));
             return treap->get_kth(k)->val.second;
@@ -514,12 +516,12 @@ namespace sjtu {
          */
         iterator begin() {
             if (treap == nullptr) return iterator(this, nullptr);
-            return iterator(this, treap->root);
+            return iterator(this, treap->get_kth(1));
         }
 
         const_iterator cbegin() const {
             if (treap == nullptr) return const_iterator(this, nullptr);
-            return const_iterator(this, treap->root);
+            return const_iterator(this, treap->get_kth(1));
         }
 
         /**
@@ -565,6 +567,7 @@ namespace sjtu {
          *   the second one is true if insert successfully, or false.
          */
         pair<iterator, bool> insert(const value_type &value) {
+            if (!treap) treap = new Treap;
             iterator iter = find(value.first);
             if (iter == end()) return pair<iterator, bool>(iterator(this, treap->insert(value)), true);
             return pair<iterator, bool>(iter, false);
