@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b97444a0-01d0-4597-865b-7aa1d739352c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/class-bint.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/class-integer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/class-matrix.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/3.16.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/3.16.3/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/3.16.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/3.16.3/CompilerIdC/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/3.16.3/CompilerIdCXX/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/deque.dir/CXX.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/deque.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/deque.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/deque.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/deque.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/deque.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/deque.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/deque.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/deque.dir/main.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/deque.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/deque" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/deque.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/cmake-build-debug/deque.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/class-bint.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/class-integer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/class-matrix.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/five/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/five/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/four.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/four.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/four/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/four/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/one.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/one.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/one/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/one/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/six/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/six/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/three.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/three.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/three/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/three/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/two.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/two.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/two/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/data/two/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/deque.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/exceptions.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/test.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/deque/utility.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/cmake-build-debug/map.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/class-bint.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/class-integer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/class-matrix.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/five.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/five.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/five/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/five/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/four.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/four.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/four/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/four/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/one.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/one.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/one/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/one/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/seven.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/seven.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/seven/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/seven/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/six.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/six.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/six/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/six/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/three.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/three.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/three/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/three/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/two.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/two.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/two/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/data/two/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/exceptions.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/map.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/utility.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/five.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/five.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/five/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/five/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/four.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/four.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/four/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/four/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/one.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/one.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/one/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/one/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/three.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/three.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/three/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/three/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/two.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/two.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/two/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/data/two/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/exceptions.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/priority_queue.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/priority_queue/utility.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/tutorials/detect-memory-leak/detect-memory-leak.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/tutorials/detect-memory-leak/for-vscode/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/tutorials/detect-memory-leak/pic/clion-run-valgrind.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/tutorials/detect-memory-leak/pic/clion-valgrind.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/tutorials/detect-memory-leak/pic/clion-wsl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/tutorials/detect-memory-leak/pic/mac-xcode.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/tutorials/detect-memory-leak/pic/mac-xcode1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/tutorials/detect-memory-leak/pic/vscode-wsl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/tutorials/detect-memory-leak/pic/wsl-valgrind.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/3.16.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/3.16.3/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/3.16.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/3.16.3/CompilerIdC/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/3.16.3/CompilerIdCXX/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/vector.dir/CXX.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/vector.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/vector.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/vector.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/vector.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/vector.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/vector.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/vector.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/vector.dir/main.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeFiles/vector.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/class-bint.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/class-integer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/class-matrix.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/four.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/four.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/four/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/four/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/one.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/one.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/one/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/one/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/three.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/three.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/three/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/three/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/two.memcheck/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/two.memcheck/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/two/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/data/two/code.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/exceptions.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/utility.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/vector" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/vector.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/vector/vector.hpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1sBkTUufp5d8kMgcckbrMRQXdEn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="map" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="map" TARGET_NAME="map" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="map" RUN_TARGET_NAME="map">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b97444a0-01d0-4597-865b-7aa1d739352c" name="Default Changelist" comment="" />
+      <created>1620353377613</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620353377613</updated>
+      <workItem from="1620353378963" duration="322000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

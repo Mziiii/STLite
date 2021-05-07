@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/2/cs/STLite_ACM-main/map/exceptions.hpp
+cstddef
+-
+cstring
+-
+string
+-
+
+F:/2/cs/STLite_ACM-main/map/main.cpp
+map.hpp
+F:/2/cs/STLite_ACM-main/map/map.hpp
+iostream
+-
+cassert
+-
+string
+-
+
+F:/2/cs/STLite_ACM-main/map/map.hpp
+functional
+-
+cstddef
+-
+utility.hpp
+F:/2/cs/STLite_ACM-main/map/utility.hpp
+exceptions.hpp
+F:/2/cs/STLite_ACM-main/map/exceptions.hpp
+ctime
+-
+cstdlib
+-
+
+F:/2/cs/STLite_ACM-main/map/utility.hpp
+utility
+-
+

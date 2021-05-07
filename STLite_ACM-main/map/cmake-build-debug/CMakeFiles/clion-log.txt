@@ -1,0 +1,11 @@
+"D:\Clion\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" F:\2\cs\STLite_ACM-main\map
+-- The CXX compiler identification is GNU 8.1.0
+-- Check for working CXX compiler: D:/MinGW/x86_64-8.1.0-release-win32-seh-rt_v6-rev0/mingw64/bin/g++.exe
+-- Check for working CXX compiler: D:/MinGW/x86_64-8.1.0-release-win32-seh-rt_v6-rev0/mingw64/bin/g++.exe - works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: F:/2/cs/STLite_ACM-main/map/cmake-build-debug
