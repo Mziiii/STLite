@@ -31,7 +31,7 @@ namespace sjtu {
     private:
         class Node {
         public:
-            Node *left, *right;
+            Node *left= nullptr, *right= nullptr;
             value_type val;
             int size, priority;
 
@@ -68,7 +68,7 @@ namespace sjtu {
             }
 
             Treap(const Treap &other) : root(nullptr) {
-                root = new_node(other);
+                root = new_node(other.root);
                 size = root->size;
             }
 
@@ -80,11 +80,12 @@ namespace sjtu {
             }
 
             void clear(Node *node) {
-                Node *pos = node;
-                if (pos->right) clear(pos->right);
-                if (pos->left) clear(pos->left);
+                if (node == nullptr) return;
+                if (node->right)
+                    clear(node->right);
+                if (node->left) clear(node->left);
                 node->size = 0;
-                delete *pos;
+                delete node;
             }
 
             ~Treap() {
@@ -94,7 +95,7 @@ namespace sjtu {
             }
 
             Node *new_node(Node *other) {
-                Node *node(other->val);
+                Node *node = new Node(other->val);
                 if (other->left) node->left = new_node(other->left);
                 if (other->right) node->right = new_node(other->right);
                 node->size = other->size;
@@ -117,25 +118,29 @@ namespace sjtu {
 
             pair<Node *, Node *> split(Node *pos, int kk) {
                 if (!pos) return pair<Node *, Node *>(nullptr, nullptr);
-                pair<Node *, Node *> tmp;
-                if (pos && pos->left->size >= kk) {
-                    tmp = split(pos->left, kk);
+                if (kk == 0) return pair<Node *, Node *>(nullptr, pos);
+                if (!pos->left && !pos->right) return pair<Node *, Node *>(pos, nullptr);
+
+                if (pos->left && pos->left->size >= kk) {
+                    pair<Node *, Node *> tmp = split(pos->left, kk);
                     pos->left = tmp.second;
                     pos->update();
                     tmp.second = pos;
+                    return tmp;
                 } else {
-                    tmp = split(pos->right, kk - 1 - pos->left->size);
+                    pair<Node *, Node *> tmp = split(pos->right, kk - 1 - (pos->left ? pos->left->size : 0));
                     pos->right = tmp.first;
                     pos->update();
                     tmp.first = pos;
+                    return tmp;
                 }
-                return pos;
             }
 
-            int get_rank(Node *pos, Key key) const{
+            int get_rank(Node *pos, Key key) const {
                 if (pos == nullptr) return 0;
+                int lsize = pos->left ? pos->left->size : 0;
                 return cmp(pos->val.first, key) ? get_rank(pos->left, key) : get_rank(pos->right, key) + 1 +
-                                                                             pos->left->size;
+                                                                             lsize;
             }
 
             Node *get_kth(int k) {
@@ -152,8 +157,8 @@ namespace sjtu {
                     size = 1;
                     return root;
                 }
-                int k = get_rank(root, val);
-                pair<Node *, Node *> x = split(root, k);
+                int k = get_rank(root, val.first);
+                pair<Node *, Node *> x(split(root, k));
                 Node *pos = new Node(val);
                 root = merge(x.first, merge(pos, x.second));
                 return root;
@@ -206,6 +211,7 @@ namespace sjtu {
             iterator &operator=(const iterator &other) {
                 if (this == &other) return *this;
                 map_ptr = other.map_ptr;
+                treap_ptr = other.treap_ptr;
                 node_ptr = other.node_ptr;
                 return *this;
             }
@@ -301,7 +307,7 @@ namespace sjtu {
              */
             value_type *operator->() const noexcept {
                 if (node_ptr == nullptr) return nullptr;
-                return node_ptr->val;
+                return &(node_ptr->val);
             }
         };
 
@@ -313,7 +319,7 @@ namespace sjtu {
         private:// data members.
             const map<Key, T, Compare> *map_ptr;
             Treap *treap_ptr;//todo:add const
-            Node *node_ptr;
+            const Node *node_ptr;
         public:
             const_iterator() : map_ptr(nullptr), treap_ptr(nullptr), node_ptr(nullptr) {}
 
@@ -367,7 +373,7 @@ namespace sjtu {
                 if (node_ptr == nullptr) return const_iterator(map_ptr, treap_ptr->get_kth(treap_ptr->sze()));
                 int k = treap_ptr->get_rank(treap_ptr->root, node_ptr->val.first);
                 if (k == 1) throw invalid_iterator();
-                iterator iter = *this;
+                const_iterator iter = *this;
                 node_ptr = treap_ptr->get_kth(--k);
                 return iter;
             }
@@ -427,7 +433,7 @@ namespace sjtu {
              */
             const value_type *operator->() const noexcept {
                 if (node_ptr == nullptr) return nullptr;
-                return node_ptr->val;
+                return &(node_ptr->val);
             }
         };
 
@@ -435,9 +441,13 @@ namespace sjtu {
         /**
          * TODO two constructors
          */
-        map() : treap(nullptr) {}
+        map() : treap(nullptr) {
+            treap = new Treap;
+        }
 
-        map(const map &other) : treap(other.treap) {}
+        map(const map &other) : treap(nullptr) {
+            treap = new Treap(*(other.treap));
+        }
 
         /**
          * TODO assignment operator
@@ -453,7 +463,7 @@ namespace sjtu {
          */
         ~map() {
             if (treap) treap->clear(treap->root);
-            treap = nullptr;
+            delete treap;
         }
 
         /**
@@ -569,7 +579,7 @@ namespace sjtu {
             if (pos == end()) throw invalid_iterator();
             if (pos.treap_ptr != treap) throw invalid_iterator();
             if (pos.node_ptr == nullptr) throw invalid_iterator();
-            if (find(pos.node_ptr->val) == cend()) throw invalid_iterator();
+            if (end() == find(pos.node_ptr->val.first)) throw invalid_iterator();
             treap->remove(pos.node_ptr->val.first);
         }
 
