@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-F:/2/cs/STLite_ACM-main/map/exceptions.hpp
+/mnt/f/2/cs/STLite_ACM-main/map/exceptions.hpp
 cstddef
 -
 cstring
@@ -14,25 +14,35 @@ cstring
 string
 -
 
-F:/2/cs/STLite_ACM-main/map/main.cpp
-map.hpp
-F:/2/cs/STLite_ACM-main/map/map.hpp
-iostream
+/mnt/f/2/cs/STLite_ACM-main/map/main.cpp
+fstream
 -
 cassert
 -
-string
+iostream
 -
+vector
+-
+algorithm
+-
+map
+-
+ctime
+-
+exceptions.hpp
+/mnt/f/2/cs/STLite_ACM-main/map/exceptions.hpp
+map.hpp
+/mnt/f/2/cs/STLite_ACM-main/map/map.hpp
 
-F:/2/cs/STLite_ACM-main/map/map.hpp
+/mnt/f/2/cs/STLite_ACM-main/map/map.hpp
 functional
 -
 cstddef
 -
 utility.hpp
-F:/2/cs/STLite_ACM-main/map/utility.hpp
+/mnt/f/2/cs/STLite_ACM-main/map/utility.hpp
 exceptions.hpp
-F:/2/cs/STLite_ACM-main/map/exceptions.hpp
+/mnt/f/2/cs/STLite_ACM-main/map/exceptions.hpp
 ctime
 -
 cstdlib
@@ -40,7 +50,7 @@ cstdlib
 iostream
 -
 
-F:/2/cs/STLite_ACM-main/map/utility.hpp
+/mnt/f/2/cs/STLite_ACM-main/map/utility.hpp
 utility
 -
 

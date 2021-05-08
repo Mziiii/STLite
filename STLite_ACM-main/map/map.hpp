@@ -85,7 +85,6 @@ namespace sjtu {
                 if (node->right)
                     clear(node->right);
                 if (node->left) clear(node->left);
-                node->size = 0;
                 delete node;
             }
 
@@ -167,7 +166,7 @@ namespace sjtu {
 
             void remove(Key key) {
                 int k = get_rank(root, key);
-                Node *node=get_kth(k);
+                Node *node = get_kth(k);
                 pair<Node *, Node *> x = split(root, k - 1);
                 pair<Node *, Node *> y = split(x.second, 1);
                 root = merge(x.first, y.second);
@@ -473,6 +472,7 @@ namespace sjtu {
 
         map &operator=(const map &other) {
             if (this == &other) return *this;
+            if (treap) delete treap;
             treap = new Treap(*(other.treap));
             return *this;
         }
@@ -481,8 +481,9 @@ namespace sjtu {
          * TODO Destructors
          */
         ~map() {
-            if (treap) treap->clear(treap->root);
-            delete treap;
+            if (treap)
+//                treap->clear(treap->root);
+                delete treap;
         }
 
         /**

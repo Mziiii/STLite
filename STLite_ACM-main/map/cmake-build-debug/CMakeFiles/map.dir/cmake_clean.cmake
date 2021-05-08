@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/map.dir/main.cpp.obj"
-  "libmap.dll.a"
-  "map.exe"
-  "map.exe.manifest"
+  "CMakeFiles/map.dir/main.cpp.o"
+  "map"
   "map.pdb"
 )
 

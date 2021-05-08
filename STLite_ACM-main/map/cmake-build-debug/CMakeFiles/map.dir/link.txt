@@ -1,3 +1,1 @@
-"D:\Clion\CLion 2020.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\map.dir/objects.a
-D:\MinGW\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\mingw64\bin\ar.exe cr CMakeFiles\map.dir/objects.a @CMakeFiles\map.dir\objects1.rsp
-D:\MinGW\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\map.dir/objects.a -Wl,--no-whole-archive  -o map.exe -Wl,--out-implib,libmap.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\map.dir\linklibs.rsp
+/usr/bin/c++  -g   CMakeFiles/map.dir/main.cpp.o  -o map 
