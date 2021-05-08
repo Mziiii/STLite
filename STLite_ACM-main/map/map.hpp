@@ -40,7 +40,7 @@ namespace sjtu {
                 priority = rand();
             }
 
-            Node(value_type v) : size(1), val(v), left(nullptr), right(nullptr) {
+            Node(const value_type &v) : size(1), val(v), left(nullptr), right(nullptr) {
                 priority = rand();
             }
 
@@ -57,20 +57,22 @@ namespace sjtu {
         class Treap {
         public:
             Node *root;
-            int size;
+            int size;/////fake_size
             Compare cmp;
 
             Treap() : root(nullptr), size(0) {////todo:avoid using
             }
 
-            Treap(value_type v) : root(nullptr) {
+            Treap(const value_type &v) : root(nullptr) {
                 root = new Node(v);
                 size = root->size;
             }
 
             Treap(const Treap &other) : root(nullptr) {
-                root = new_node(other.root);
-                size = root->size;
+                if (other.root) {
+                    root = new_node(other.root);
+                    size = root->size;
+                }
             }
 
             Treap &operator=(const Treap &other) {
@@ -116,7 +118,7 @@ namespace sjtu {
                 }
             }
 
-            pair<Node *, Node *> split(Node *pos, int kk) {
+            pair<Node *, Node *> split(Node *pos,const int &kk) {
                 if (!pos) return pair<Node *, Node *>(nullptr, nullptr);
                 if (kk == 0) return pair<Node *, Node *>(nullptr, pos);
                 if (!pos->left && !pos->right) return pair<Node *, Node *>(pos, nullptr);
@@ -136,14 +138,20 @@ namespace sjtu {
                 }
             }
 
-            int get_rank(Node *pos, Key key) const {
+            bool exist(Node *pos,const Key &key) const {
+                if (pos == nullptr) return false;
+                if (!cmp(pos->val.first, key) && !cmp(key, pos->val.first)) return true;
+                return cmp(key, pos->val.first) ? exist(pos->left, key) : exist(pos->right, key);
+            }
+
+            int get_rank(Node *pos,const Key &key) const {
                 if (pos == nullptr) return 0;
                 int lsize = pos->left ? pos->left->size : 0;
-                return cmp(pos->val.first, key) ? get_rank(pos->left, key) : get_rank(pos->right, key) + 1 +
+                return cmp(key, pos->val.first) ? get_rank(pos->left, key) : get_rank(pos->right, key) + 1 +
                                                                              lsize;
             }
 
-            Node *get_kth(int k) {
+            Node *get_kth(const int &k) {
                 pair<Node *, Node *> x = split(root, k - 1);
                 pair<Node *, Node *> y = split(x.second, 1);
                 Node *ans = y.first;
@@ -151,7 +159,7 @@ namespace sjtu {
                 return ans;
             }
 
-            Node *insert(value_type val) {
+            Node *insert(const value_type &val) {
                 if (root == nullptr) {
                     root = new Node(val);
                     size = 1;
@@ -161,10 +169,10 @@ namespace sjtu {
                 pair<Node *, Node *> x(split(root, k));
                 Node *pos = new Node(val);
                 root = merge(x.first, merge(pos, x.second));
-                return root;
+                return pos;
             }
 
-            void remove(Key key) {
+            void remove(const Key &key) {
                 int k = get_rank(root, key);
                 Node *node = get_kth(k);
                 pair<Node *, Node *> x = split(root, k - 1);
@@ -177,7 +185,7 @@ namespace sjtu {
                 return root ? root->size : 0;
             }
 
-            void print() {
+            void print() {//todo
                 for (int i = 1; i <= sze(); ++i) {
                     Node *node = get_kth(i);
                     std::cout << sze() << ' ' << node->val.first.counter << ' ' << node->val.first.val << ' '
@@ -494,15 +502,15 @@ namespace sjtu {
          */
         T &at(const Key &key) {
             if (!treap) throw container_is_empty();
+            if (!treap->exist(treap->root, key)) throw index_out_of_bound();
             int k = treap->get_rank(treap->root, key);
-            if (k == 0) throw index_out_of_bound();
             return treap->get_kth(k)->val.second;
         }
 
         const T &at(const Key &key) const {
             if (!treap) throw container_is_empty();
+            if (!treap->exist(treap->root, key)) throw index_out_of_bound();
             int k = treap->get_rank(treap->root, key);
-            if (k == 0) throw index_out_of_bound();
             return treap->get_kth(k)->val.second;
         }
 
@@ -517,11 +525,10 @@ namespace sjtu {
                 treap = new Treap;
                 treap->insert(value_type(key, T()));
             }
-            int k = treap->get_rank(treap->root, key);
-            if (k == 0) {
+            if (!treap->exist(treap->root, key)) {
                 treap->insert(value_type(key, T()));
-                k = treap->get_rank(treap->root, key);
             }
+            int k = treap->get_rank(treap->root, key);
             return treap->get_kth(k)->val.second;
         }
 
@@ -530,8 +537,8 @@ namespace sjtu {
          */
         const T &operator[](const Key &key) const {
             if (!treap) throw container_is_empty();
+            if (!treap->exist(treap->root, key)) throw index_out_of_bound();
             int k = treap->get_rank(treap->root, key);
-            if (k == 0) throw index_out_of_bound();
             return treap->get_kth(k)->val.second;
         }
 
@@ -630,19 +637,23 @@ namespace sjtu {
          */
         iterator find(const Key &key) {
             if (treap == nullptr) return end();
-            int k = treap->get_rank(treap->root, key);
-            if (k) return iterator(this, treap->get_kth(k));
+            if (treap->exist(treap->root, key)) {
+                int k = treap->get_rank(treap->root, key);
+                return iterator(this, treap->get_kth(k));
+            }
             return end();
         }
 
         const_iterator find(const Key &key) const {
             if (treap == nullptr) return cend();
-            int k = treap->get_rank(treap->root, key);
-            if (k) return const_iterator(this, treap->get_kth(k));
+            if (treap->exist(treap->root, key)) {
+                int k = treap->get_rank(treap->root, key);
+                return const_iterator(this, treap->get_kth(k));
+            }
             return cend();
         }
 
-        void print() {
+        void print() {//todo
             treap->print();
         }
     };
