@@ -9,7 +9,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcc1f572-12fe-4e7a-8409-b764f12d3e66" name="Default Changelist" comment="" />
+    <list default="true" id="fcc1f572-12fe-4e7a-8409-b764f12d3e66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../STLite_ACM-main/map/map.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/map.hpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +21,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1sAko9MQS5Wjt6CgqDtLO8Uc7VN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -35,11 +37,6 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../map" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -54,11 +51,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620322954003</updated>
-      <workItem from="1620322956560" duration="1306000" />
+      <workItem from="1620322956560" duration="1870000" />
+      <workItem from="1620431812112" duration="617000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

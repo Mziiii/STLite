@@ -11,8 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b97444a0-01d0-4597-865b-7aa1d739352c" name="Default Changelist" comment="lots of bugs.">
-      <change beforePath="$PROJECT_DIR$/../STLite_ACM-main/map/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+    <list default="true" id="b97444a0-01d0-4597-865b-7aa1d739352c" name="Default Changelist" comment=".">
+      <change afterPath="$PROJECT_DIR$/../STLite_ACM-main/untitled/.idea/untitled.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STLite_ACM-main/map/cmake-build-debug/CMakeFiles/map.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/cmake-build-debug/CMakeFiles/map.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STLite_ACM-main/map/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../STLite_ACM-main/map/map.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../STLite_ACM-main/map/map.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +66,9 @@
       <updated>1620353377613</updated>
       <workItem from="1620353378963" duration="322000" />
       <workItem from="1620353728904" duration="17067000" />
+      <workItem from="1620388907289" duration="6873000" />
+      <workItem from="1620431830369" duration="3863000" />
+      <workItem from="1620449834245" duration="3176000" />
     </task>
     <servers />
   </component>
@@ -83,6 +89,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lots of bugs." />
-    <option name="LAST_COMMIT_MESSAGE" value="lots of bugs." />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>

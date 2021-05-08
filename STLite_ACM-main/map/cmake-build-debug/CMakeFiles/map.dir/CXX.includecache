@@ -37,6 +37,8 @@ ctime
 -
 cstdlib
 -
+iostream
+-
 
 F:/2/cs/STLite_ACM-main/map/utility.hpp
 utility

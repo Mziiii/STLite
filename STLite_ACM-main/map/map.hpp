@@ -12,6 +12,7 @@
 
 #include<ctime>
 #include<cstdlib>
+#include <iostream>
 
 namespace sjtu {
 
@@ -148,7 +149,7 @@ namespace sjtu {
                 pair<Node *, Node *> y = split(x.second, 1);
                 Node *ans = y.first;
                 merge(x.first, merge(ans, y.second));
-                return root;
+                return ans;
             }
 
             Node *insert(value_type val) {
@@ -166,7 +167,7 @@ namespace sjtu {
 
             void remove(Key key) {
                 int k = get_rank(root, key);
-                pair<Node *, Node *> x = split(root, k);
+                pair<Node *, Node *> x = split(root, k - 1);
                 pair<Node *, Node *> y = split(x.second, 1);
                 root = merge(x.first, y.second);
             }
@@ -175,6 +176,12 @@ namespace sjtu {
                 return root ? root->size : 0;
             }
 
+            void print() {
+                for (int i = 1; i <= sze(); ++i) {
+                    Node *node = get_kth(i);
+                    std::cout << node->val.first.counter << ' ' <<node->val.first.val<<' '<< node->val.second << std::endl;
+                }
+            }
         };
         /**
          * see BidirectionalIterator at CppReference for help.
@@ -450,7 +457,7 @@ namespace sjtu {
         map(const map &other) : treap(nullptr) {
             treap = new Treap(*(other.treap));
         }
-        
+
         map &operator=(const map &other) {
             if (this == &other) return *this;
             treap = new Treap(*(other.treap));
@@ -616,6 +623,10 @@ namespace sjtu {
             int k = treap->get_rank(treap->root, key);
             if (k) return const_iterator(this, treap->get_kth(k));
             return cend();
+        }
+
+        void print(){
+            treap->print();
         }
     };
 
