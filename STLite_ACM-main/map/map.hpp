@@ -148,7 +148,7 @@ namespace sjtu {
                 pair<Node *, Node *> x = split(root, k - 1);
                 pair<Node *, Node *> y = split(x.second, 1);
                 Node *ans = y.first;
-                merge(x.first, merge(ans, y.second));
+                root = merge(x.first, merge(ans, y.second));
                 return ans;
             }
 
@@ -167,9 +167,11 @@ namespace sjtu {
 
             void remove(Key key) {
                 int k = get_rank(root, key);
+                Node *node=get_kth(k);
                 pair<Node *, Node *> x = split(root, k - 1);
                 pair<Node *, Node *> y = split(x.second, 1);
                 root = merge(x.first, y.second);
+                delete node;
             }
 
             int sze() {
@@ -179,7 +181,9 @@ namespace sjtu {
             void print() {
                 for (int i = 1; i <= sze(); ++i) {
                     Node *node = get_kth(i);
-                    std::cout << node->val.first.counter << ' ' <<node->val.first.val<<' '<< node->val.second << std::endl;
+                    std::cout << sze() << ' ' << node->val.first.counter << ' ' << node->val.first.val << ' '
+                              << node->val.second
+                              << std::endl;
                 }
             }
         };
@@ -224,6 +228,7 @@ namespace sjtu {
             }
 
             iterator operator++(int) {
+                treap_ptr = map_ptr->treap;
                 if (treap_ptr == nullptr) throw invalid_iterator();
                 if (treap_ptr->sze() == 0) throw invalid_iterator();
                 int k = treap_ptr->get_rank(treap_ptr->root, node_ptr->val.first);
@@ -238,6 +243,7 @@ namespace sjtu {
              * TODO ++iter
              */
             iterator &operator++() {
+                treap_ptr = map_ptr->treap;
                 if (treap_ptr == nullptr) throw invalid_iterator();
                 if (treap_ptr->sze() == 0) throw invalid_iterator();
                 int k = treap_ptr->get_rank(treap_ptr->root, node_ptr->val.first);
@@ -251,6 +257,7 @@ namespace sjtu {
              * TODO iter--
              */
             iterator operator--(int) {
+                treap_ptr = map_ptr->treap;
                 if (treap_ptr == nullptr) throw invalid_iterator();
                 if (treap_ptr->sze() == 0) throw invalid_iterator();
                 if (node_ptr == nullptr) return iterator(map_ptr, treap_ptr->get_kth(treap_ptr->sze()));
@@ -265,6 +272,7 @@ namespace sjtu {
              * TODO --iter
              */
             iterator &operator--() {
+                treap_ptr = map_ptr->treap;
                 if (treap_ptr == nullptr) throw invalid_iterator();
                 if (treap_ptr->sze() == 0) throw invalid_iterator();
                 if (node_ptr == nullptr) {
@@ -287,14 +295,12 @@ namespace sjtu {
 
             bool operator==(const iterator &rhs) const {
                 if (map_ptr != rhs.map_ptr) return false;
-                if (treap_ptr != rhs.treap_ptr) return false;
                 if (node_ptr != rhs.node_ptr) return false;
                 return true;
             }
 
             bool operator==(const const_iterator &rhs) const {
                 if (map_ptr != rhs.map_ptr) return false;
-                if (treap_ptr != rhs.treap_ptr) return false;
                 if (node_ptr != rhs.node_ptr) return false;
                 return true;
             }
@@ -344,6 +350,7 @@ namespace sjtu {
             const_iterator &operator=(const const_iterator &other) {
                 if (this == &other) return *this;
                 map_ptr = other.map_ptr;
+                treap_ptr = other.treap_ptr;
                 node_ptr = other.node_ptr;
                 return *this;
             }
@@ -352,12 +359,14 @@ namespace sjtu {
             // And other methods in iterator.
             // And other methods in iterator.
             const_iterator operator++(int) {
+                treap_ptr = map_ptr->treap;
                 if (treap_ptr == nullptr) throw invalid_iterator();
                 if (treap_ptr->sze() == 0) throw invalid_iterator();
                 int k = treap_ptr->get_rank(treap_ptr->root, node_ptr->val.first);
-                if (treap_ptr->sze() == k) throw invalid_iterator();
+                if (treap_ptr->sze() < k) throw invalid_iterator();
                 const_iterator iter = *this;
-                node_ptr = treap_ptr->get_kth(k);
+                if (treap_ptr->sze() == k) node_ptr = nullptr;
+                node_ptr = treap_ptr->get_kth(++k);
                 return iter;
             }
 
@@ -365,10 +374,12 @@ namespace sjtu {
              * TODO ++iter
              */
             const_iterator &operator++() {
+                treap_ptr = map_ptr->treap;
                 if (treap_ptr == nullptr) throw invalid_iterator();
                 if (treap_ptr->sze() == 0) throw invalid_iterator();
                 int k = treap_ptr->get_rank(treap_ptr->root, node_ptr->val.first);
-                if (treap_ptr->sze() == k) throw invalid_iterator();
+                if (treap_ptr->sze() < k) throw invalid_iterator();
+                if (treap_ptr->sze() == k) node_ptr = nullptr;
                 node_ptr = treap_ptr->get_kth(++k);
                 return *this;
             }
@@ -377,6 +388,7 @@ namespace sjtu {
              * TODO iter--
              */
             const_iterator operator--(int) {
+                treap_ptr = map_ptr->treap;
                 if (treap_ptr == nullptr) throw invalid_iterator();
                 if (treap_ptr->sze() == 0) throw invalid_iterator();
                 if (node_ptr == nullptr) return const_iterator(map_ptr, treap_ptr->get_kth(treap_ptr->sze()));
@@ -391,6 +403,7 @@ namespace sjtu {
              * TODO --iter
              */
             const_iterator &operator--() {
+                treap_ptr = map_ptr->treap;
                 if (treap_ptr == nullptr) throw invalid_iterator();
                 if (treap_ptr->sze() == 0) throw invalid_iterator();
                 if (node_ptr == nullptr) {
@@ -504,7 +517,10 @@ namespace sjtu {
                 treap->insert(value_type(key, T()));
             }
             int k = treap->get_rank(treap->root, key);
-            if (k == 0) treap->insert(value_type(key, T()));
+            if (k == 0) {
+                treap->insert(value_type(key, T()));
+                k = treap->get_rank(treap->root, key);
+            }
             return treap->get_kth(k)->val.second;
         }
 
@@ -625,7 +641,7 @@ namespace sjtu {
             return cend();
         }
 
-        void print(){
+        void print() {
             treap->print();
         }
     };

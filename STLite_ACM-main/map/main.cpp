@@ -57,16 +57,7 @@ void tester(void) {
         }
     }
     //	test: count(), find(), erase()
-//    map.print();
-    for (int i = 0; i < 99619; ++i) {
-        if (i > 1896 && i <= 2016) {
-            continue;
-        }
-        assert(map.count(Integer(i)) == 1);
-        assert(map.find(Integer(i)) != map.end());
-        map.erase(map.find(Integer(i)));
-    }
-    for (int i = 99619; i < 100000; ++i) {
+    for (int i = 0; i < 100000; ++i) {
         if (i > 1896 && i <= 2016) {
             continue;
         }

@@ -68,7 +68,7 @@
       <workItem from="1620353728904" duration="17067000" />
       <workItem from="1620388907289" duration="6873000" />
       <workItem from="1620431830369" duration="3863000" />
-      <workItem from="1620449834245" duration="3176000" />
+      <workItem from="1620449834245" duration="6779000" />
     </task>
     <servers />
   </component>
@@ -91,5 +91,12 @@
     <MESSAGE value="lots of bugs." />
     <MESSAGE value="." />
     <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="size" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
