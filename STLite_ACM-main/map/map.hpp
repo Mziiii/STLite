@@ -118,7 +118,7 @@ namespace sjtu {
                 }
             }
 
-            pair<Node *, Node *> split(Node *pos,const int &kk) {
+            pair<Node *, Node *> split(Node *pos, const int &kk) {
                 if (!pos) return pair<Node *, Node *>(nullptr, nullptr);
                 if (kk == 0) return pair<Node *, Node *>(nullptr, pos);
                 if (!pos->left && !pos->right) return pair<Node *, Node *>(pos, nullptr);
@@ -138,13 +138,13 @@ namespace sjtu {
                 }
             }
 
-            bool exist(Node *pos,const Key &key) const {
+            bool exist(Node *pos, const Key &key) const {
                 if (pos == nullptr) return false;
                 if (!cmp(pos->val.first, key) && !cmp(key, pos->val.first)) return true;
                 return cmp(key, pos->val.first) ? exist(pos->left, key) : exist(pos->right, key);
             }
 
-            int get_rank(Node *pos,const Key &key) const {
+            int get_rank(Node *pos, const Key &key) const {
                 if (pos == nullptr) return 0;
                 int lsize = pos->left ? pos->left->size : 0;
                 return cmp(key, pos->val.first) ? get_rank(pos->left, key) : get_rank(pos->right, key) + 1 +
@@ -587,7 +587,9 @@ namespace sjtu {
          * clears the contents
          */
         void clear() {
-            if (treap) treap->clear(treap->root);
+            if (treap)
+//                treap->clear(treap->root);
+                delete treap;
             treap = nullptr;
         }
 
