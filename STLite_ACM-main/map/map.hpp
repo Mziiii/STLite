@@ -142,16 +142,35 @@ namespace sjtu {
             }
 
             bool exist(Node *pos, const Key &key) const {
-                if (pos == nullptr) return false;
-                if (!cmp(pos->val.first, key) && !cmp(key, pos->val.first)) return true;
-                return cmp(key, pos->val.first) ? exist(pos->left, key) : exist(pos->right, key);
+//                if (pos == nullptr) return false;
+//                if (!cmp(pos->val.first, key) && !cmp(key, pos->val.first)) return true;
+//                return cmp(key, pos->val.first) ? exist(pos->left, key) : exist(pos->right, key);
+
+                while (pos) {
+                    if (!cmp(pos->val.first, key) && !cmp(key, pos->val.first)) return true;
+                    if (cmp(key, pos->val.first)) pos = pos->left;
+                    else {
+                        pos = pos->right;
+                    }
+                }
+                return false;
             }
 
             int get_rank(Node *pos, const Key &key) const {
-                if (pos == nullptr) return 0;
-                int lsize = pos->left ? pos->left->size : 0;
-                return cmp(key, pos->val.first) ? get_rank(pos->left, key) : get_rank(pos->right, key) + 1 +
-                                                                             lsize;
+//                if (pos == nullptr) return 0;
+//                  int lsize = pos->left ? pos->left->size : 0;
+//                return cmp(key, pos->val.first) ? get_rank(pos->left, key) : get_rank(pos->right, key) + 1 +
+//                                                                             lsize;
+
+                int rk = 0;
+                while (pos) {
+                    if (cmp(key, pos->val.first)) pos = pos->left;
+                    else {
+                        rk += 1 + (pos->left ? pos->left->size : 0);
+                        pos = pos->right;
+                    }
+                }
+                return rk;
             }
 
             Node *get_kth(const int &k) {
@@ -165,7 +184,6 @@ namespace sjtu {
             Node *insert(const value_type &val) {
                 if (root == nullptr) {
                     root = new Node(val);
-                    size = 1;
                     return root;
                 }
                 int k = get_rank(root, val.first);
@@ -186,15 +204,6 @@ namespace sjtu {
 
             int sze() {
                 return root ? root->size : 0;
-            }
-
-            void print() {//todo
-                for (int i = 1; i <= sze(); ++i) {
-                    Node *node = get_kth(i);
-                    std::cout << sze() << ' ' << node->val.first.num() << ' '
-                              << node->val.second.num()
-                              << std::endl;
-                }
             }
         };
         /**
@@ -245,7 +254,7 @@ namespace sjtu {
                 if (treap_ptr->sze() < k) throw invalid_iterator();
                 iterator iter = *this;
                 if (treap_ptr->sze() == k) node_ptr = nullptr;
-                node_ptr = treap_ptr->get_kth(k + 1);
+                node_ptr = treap_ptr->get_kth(++k);
                 return iter;
             }
 
@@ -259,7 +268,7 @@ namespace sjtu {
                 int k = treap_ptr->get_rank(treap_ptr->root, node_ptr->val.first);
                 if (treap_ptr->sze() < k) throw invalid_iterator();
                 if (treap_ptr->sze() == k) node_ptr = nullptr;
-                node_ptr = treap_ptr->get_kth(k + 1);
+                node_ptr = treap_ptr->get_kth(++k);
                 return *this;
             }
 
@@ -658,9 +667,6 @@ namespace sjtu {
             return cend();
         }
 
-        void print() {//todo
-            treap->print();
-        }
     };
 
 }
