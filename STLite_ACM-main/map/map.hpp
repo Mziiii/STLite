@@ -13,6 +13,9 @@
 #include<ctime>
 #include<cstdlib>
 #include <iostream>
+#include <random>
+
+std::mt19937 rnd(2333);
 
 namespace sjtu {
 
@@ -37,11 +40,11 @@ namespace sjtu {
             int size, priority;
 
             Node() : size(0), left(nullptr), right(nullptr) {//todo:avoid using
-                priority = rand();
+                priority = rnd();
             }
 
             Node(const value_type &v) : size(1), val(v), left(nullptr), right(nullptr) {
-                priority = rand();
+                priority = rnd();
             }
 
             ~Node() {
@@ -188,8 +191,8 @@ namespace sjtu {
             void print() {//todo
                 for (int i = 1; i <= sze(); ++i) {
                     Node *node = get_kth(i);
-                    std::cout << sze() << ' ' << node->val.first.counter << ' ' << node->val.first.val << ' '
-                              << node->val.second
+                    std::cout << sze() << ' ' << node->val.first.num() << ' '
+                              << node->val.second.num()
                               << std::endl;
                 }
             }
